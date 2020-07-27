@@ -1,0 +1,38 @@
+
+SHINY APP-             Data Analysis with USArrests dataset
+========================================================
+author:Shivani R 
+date: 27/07/20
+autosize: true
+
+
+========================================================
+## DECRIPTION 
+The Shiny App explores data from the Base R data set USArrests. This data includes data on Arrest rates, by state, for the year 1973.
+
+- USArrests data set is taken under consideration and murder, assault and rape crimes are analyzed.
+-Dropdown list allows users to select the crime for which they would be provided  required infographics.
+- After the user has made the selection the two tabs in the right hand side enables the user to have a better understanding of data in the form of, 
+
+- CHOROPLETH MAP
+- HISTOGRAM
+
+
+========================================================
+## Map indicating Murder Rate across different states in US
+![Chloropleth map](app-msp.png)
+
+
+========================================================
+## Murder Rate -Map Sample Code
+
+```{r ,eval=FALSE ,echo=TRUE}
+ ggplot(arrests_map, aes(long, lat, group = group))+
+            geom_polygon(aes(fill = Murder), color = "white")+
+            scale_fill_viridis_c(option = "A")+labs(main="Murder Rate in the United States in 1973",x="Longitude",y="Latitude")
+```
+
+========================================================
+## PLot-Murder Rate
+![Chloropleth map](app-plot.png)
+
